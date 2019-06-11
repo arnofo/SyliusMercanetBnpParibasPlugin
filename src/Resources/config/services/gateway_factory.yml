@@ -1,0 +1,13 @@
+services:
+    bitbag.mercanet_bnp_paribas.gateway_factory.mercanet:
+        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+        public: true
+        arguments: [BitBag\MercanetBnpParibasPlugin\MercanetBnpParibasGatewayFactory]
+        tags:
+            - { name: payum.gateway_factory_builder, factory: mercanet_bnp_paribas }
+
+    bitbag.mercanet_bnp_paribas.gateway_factory.mercanet_subscription:
+        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+        arguments: [BitBag\MercanetBnpParibasPlugin\MercanetSubscriptionBnpParibasGatewayFactory]
+        tags:
+            - { name: payum.gateway_factory_builder, factory: mercanet_bnp_paribas_subscription }

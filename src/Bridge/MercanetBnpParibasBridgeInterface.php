@@ -73,4 +73,14 @@ interface MercanetBnpParibasBridgeInterface
      * @param string $environment
      */
     public function setEnvironment($environment);
+
+    /**
+     * @param bool $isRecurringSubscription
+     */
+    public function setIsRecurringSubscription(bool $isRecurringSubscription): void;
+
+    /**
+     * @return bool
+     */
+    public function isRecurringSubscription(): bool;
 }

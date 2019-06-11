@@ -1,0 +1,24 @@
+services:
+    bitbag.mercanet_bnp_paribas.action.capture:
+        class: BitBag\MercanetBnpParibasPlugin\Action\CaptureAction
+        public: true
+        arguments:
+            - '@payum'
+        tags:
+            - { name: payum.action, factory: mercanet_bnp_paribas, alias: payum.action.capture }
+
+    bitbag.mercanet_bnp_paribas.action.notify:
+        class: BitBag\MercanetBnpParibasPlugin\Action\NotifyAction
+        public: true
+        arguments:
+            - '@sm.factory'
+        tags:
+            - { name: payum.action, factory: mercanet_bnp_paribas, alias: payum.action.notify }
+
+    bitbag.mercanet_bnp_paribas.action.status:
+        class: BitBag\MercanetBnpParibasPlugin\Action\StatusAction
+        public: true
+        arguments:
+            - '@request_stack'
+        tags:
+            - { name: payum.action, factory: mercanet_bnp_paribas, alias: payum.action.status }

@@ -8,3 +8,7 @@ bitbag:
             not_blank: Veuillez entrer le code de sécurité.
         channel:
             currency: La seule devise autorisée est EUR.
+        times:
+            min_range: Répétable ne peut pas être plus petit que {{ limit }}.
+        interval:
+            not_blank: Intervalle ne peut être vide.

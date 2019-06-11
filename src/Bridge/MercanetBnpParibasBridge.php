@@ -44,6 +44,11 @@ final class MercanetBnpParibasBridge implements MercanetBnpParibasBridgeInterfac
     private $environment;
 
     /**
+     * @var bool
+     */
+    protected $isRecurringSubscription = false;
+
+    /**
      * @param RequestStack $requestStack
      */
     public function __construct(RequestStack $requestStack)
@@ -147,5 +152,21 @@ final class MercanetBnpParibasBridge implements MercanetBnpParibasBridgeInterfac
     public function setEnvironment($environment)
     {
         $this->environment = $environment;
+    }
+
+    /**
+     * @param bool $isRecurringSubscription
+     */
+    public function setIsRecurringSubscription(bool $isRecurringSubscription): void
+    {
+        $this->isRecurringSubscription = $isRecurringSubscription;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRecurringSubscription(): bool
+    {
+        return $this->isRecurringSubscription;
     }
 }

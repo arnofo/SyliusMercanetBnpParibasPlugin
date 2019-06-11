@@ -1,0 +1,14 @@
+services:
+    bitbag.mercanet_bnp_paribas.form.type.mercanet_gateway_configuration:
+        class: BitBag\MercanetBnpParibasPlugin\Form\Type\MercanetBnpParibasGatewayConfigurationType
+        public: true
+        tags:
+            - { name: sylius.gateway_configuration_type, type: mercanet_bnp_paribas, label: bitbag.mercanet_bnp_paribas.gateway_label }
+            - { name: form.type }
+
+    bitbag.mercanet_bnp_paribas.form.type.mercanet_subscription_gateway_configuration:
+        class: BitBag\MercanetBnpParibasPlugin\Form\Type\MercanetSubscriptionBnpParibasGatewayConfigurationType
+        public: true
+        tags:
+            - { name: sylius.gateway_configuration_type, type: mercanet_bnp_paribas_subscription, label: bitbag.mercanet_bnp_paribas_subscription.gateway_label }
+            - { name: form.type }

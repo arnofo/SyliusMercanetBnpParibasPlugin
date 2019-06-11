@@ -8,3 +8,7 @@ bitbag:
             not_blank: Please enter the Security Code.
         channel:
             currency: The only allowed currency is EUR.
+        times:
+            min_range: Times cannot be lower than {{ limit }}.
+        interval:
+            not_blank: Interval cannot be blank.

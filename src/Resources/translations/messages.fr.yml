@@ -8,3 +8,10 @@ bitbag:
         production: Production
         test: Tester
         simulation: Simulation
+        times: Répétable
+        interval: Intervalle
+        years: Années
+        months: Mois
+        days: Jours
+    mercanet_bnp_paribas_subscription:
+        gateway_label: Mercanet Abonnement BNP Paribas
